@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Annotation Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Audio Annotation Management System</h1>
+        </header>
+        <main>
+            <section class="audio-player">
+                <h2>Audio Player</h2>
+                <audio id="audio" controls>
+                    <source src="audio/sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="playback-controls">
+                    <button id="rewind">⏪ Rewind</button>
+                    <button id="play-pause">▶️ Play</button>
+                    <button id="fast-forward">⏩ Fast Forward</button>
+                </div>
+            </section>
+
+            <section class="annotations">
+                <h2>Annotations</h2>
+                <button id="add-annotation">➕ Add Annotation</button>
+                <ul id="annotation-list"></ul>
+            </section>
+
+            <section class="transcription">
+                <h2>Transcription</h2>
+                <textarea id="transcription" placeholder="Transcription will appear here..."></textarea>
+                <button id="start-transcription">🎙 Start Transcription</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

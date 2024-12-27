@@ -1,0 +1,15 @@
+-- Use an SQLite client to execute this schema, or include it in your server setup
+
+CREATE TABLE IF NOT EXISTS annotations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    audio_file TEXT NOT NULL,
+    start_time REAL NOT NULL,
+    end_time REAL NOT NULL,
+    label TEXT NOT NULL,
+    notes TEXT
+);
+
+CREATE TABLE IF NOT EXISTS labels (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    label_name TEXT NOT NULL UNIQUE
+);
